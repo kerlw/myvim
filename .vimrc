@@ -5,6 +5,7 @@ set showcmd
 set scrolloff=3
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}   "状态行显示的内容
 set laststatus=2
+set cmdheight=2
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
