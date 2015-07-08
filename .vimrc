@@ -1,4 +1,23 @@
 set encoding=utf-8
+set cul
+set ruler
+set showcmd
+set scrolloff=3
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}   "状态行显示的内容
+set laststatus=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set number
+set hlsearch
+set incsearch
+set confirm
+set nobackup
+set noswapfile
+
+filetype on
+filetype plugin on
+
 
 colorscheme lucius 
 LuciusBlack 
@@ -22,6 +41,12 @@ func! ToggleHexMod()
     endif
 endfunc
 
+" 选中状态下 Ctrl+c 复制
+"map <C-v> "*pa
+imap <C-v> <Esc>"*pa
+imap <C-a> <Esc>^
+imap <C-e> <Esc>$
+vmap <C-c> "+y
 map <F3> :NERDTreeoggle<CR>
 imap <F3> <ESC> :NERDTreeToggle<CR>
 
