@@ -10,7 +10,7 @@ syntax on
 " shift tab pages
 map <S-Left> :tabp<CR>
 map <S-Right> :tabn<CR>
-hex mode switch 十六进制查看方式切换
+" hex mode switch 十六进制查看方式切换
 map <C-H> :call  ToggleHexMod()<CR>
 func! ToggleHexMod()
     if !exists("s:hexmode") || s:hexmode == 0
@@ -23,5 +23,5 @@ func! ToggleHexMod()
 endfunc
 
 let g:winManagerWindowLayout='FileExplorer'
-nmap wm :WMToggle<cr>
-
+map <F3> :WMToggle<CR>
+imap <F3> <ESC> :WMToggle<CR>

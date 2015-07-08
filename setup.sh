@@ -6,7 +6,6 @@ elif which yum >/dev/null; then
     sudo yum install -y vim git
 fi
 
-mv -f ~/vim ~/vim_old
 cd ~/ && git clone https://github.com/kerlw/myvim.git vim
 mv -f ~/.vim ~/.vim_old
 mv -f ~/vim ~/.vim
