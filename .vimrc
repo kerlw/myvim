@@ -47,7 +47,7 @@ imap <C-v> <Esc>"*pa
 imap <C-a> <Esc>^
 imap <C-e> <Esc>$
 vmap <C-c> "+y
-map <F3> :NERDTreeoggle<CR>
+map <F3> :NERDTreeToggle<CR>
 imap <F3> <ESC> :NERDTreeToggle<CR>
 
 "当打开vim且没有文件时自动打开NERDTree
