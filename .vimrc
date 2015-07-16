@@ -15,16 +15,16 @@ set incsearch
 set confirm
 set nobackup
 set noswapfile
+set mouse=a
 
 filetype on
 filetype plugin on
 
-
-colorscheme lucius 
-LuciusBlack 
-
 syntax enable
 syntax on
+
+"colorscheme lucius 
+"LuciusBlack 
 
 :nmap <silent> <F9> <ESC>:Tlist<RETURN>
 " shift tab pages
