@@ -1,3 +1,4 @@
+set nocompatible
 set encoding=utf-8
 set cul
 set ruler
@@ -23,8 +24,28 @@ filetype plugin on
 syntax enable
 syntax on
 
-"colorscheme lucius 
-"LuciusBlack 
+set t_Co 256
+if version > 730
+    colorscheme lucius 
+    LuciusBlack 
+else
+    colorscheme xterm64
+endif
+
+if has("cscope") && filereadable("/usr/bin/cscope")
+   set csprg=/usr/bin/cscope
+   set csto=0
+   set cst
+   set nocsverb
+   " add any database in current directory
+   if filereadable("cscope.out")
+       cs add cscope.out
+   "else add database pointed to by environment
+   elseif $CSCOPE_DB != ""
+      cs add $CSCOPE_DB
+   endif
+   set csverb
+endif
 
 :nmap <silent> <F9> <ESC>:Tlist<RETURN>
 " shift tab pages
