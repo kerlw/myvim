@@ -24,12 +24,12 @@ filetype plugin on
 syntax enable
 syntax on
 
-set t_Co 256
+set t_Co=256
 if version > 730
     colorscheme lucius 
     LuciusBlack 
 else
-    colorscheme xterm64
+    colorscheme xterm16
 endif
 
 if has("cscope") && filereadable("/usr/bin/cscope")
